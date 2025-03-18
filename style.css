@@ -1,0 +1,64 @@
+.btn:hover {
+    transform: scale(1.1);
+}
+body {
+    background-image: url('mjy15.jpg');
+    background-size: cover;
+}
+*{
+    text-decoration: none;
+}
+.navbar{
+    background: font-family="calibri"; padding-right: 15px; padding-left: 15px;
+}
+.navdiv{
+    display: flex; justify-content: space-between;
+}
+.logo a{
+    font-size: 35px; font-weight: 600; color: white;
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+    background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+    color: white; font-weight: bold; font-size: 15px;
+}
+h3, h4, h1, h2, .hometxt {
+    color: white;
+}
+.homeimg {
+    border-radius:15%;
+    border: 7px solid #555;
+}
+h4{ 
+    font-size: 35px;
+}
+.abtimg {
+    width: 250px;
+    border-radius: 50%;
+  }
+.abttxt {
+    font-size:15px;
+    color: white;
+}
+.logo {
+    float: left;
+    height: 50px; 
+    width: auto; 
+    margin-right: 10px;
+}
+.email {
+    color:#ffffff;
+}
+h3 {
+    font-size: 35px;
+}
+.nametxt{
+    text-align:center;
+}
