@@ -35,27 +35,6 @@ ul li {
   display: inline-block;
 }
 
-li a,
-button a {
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: bold;
-}
-
-button {
-  background-color: black;
-  margin-left: 10px;
-  border-radius: 10px;
-  padding: 20px;
-  width: 120px;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),
-              0 17px 50px 0 rgba(255, 255, 255, 0.19);
-}
-
 h1,
 h2,
 h3,
@@ -135,4 +114,58 @@ h4 {
 
 hr.top {
   border: 1px solid #6f9596;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 999px;
+  color: #00d9ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  z-index: 1;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+  transition: color 0.5s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #00f5ff, #00ff95);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #00f5ff, #00ff95);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+  z-index: -2;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:hover::after {
+  transform: scale(1);
+}
+
+html {
+  overflow-y: scroll;
 }
